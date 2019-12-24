@@ -2326,6 +2326,7 @@ class P4Submit(Command, P4UserMap):
         # Apply the commits, one at a time.  On failure, ask if should
         # continue to try the rest of the patches, or quit.
         #
+
         if self.dry_run:
             print("Would apply")
         applied = []
@@ -3907,6 +3908,7 @@ class P4Clone(P4Sync):
             self.cloneDestination = self.defaultDestination(args)
 
         print("Importing from %s into %s" % (', '.join(depotPaths), self.cloneDestination))
+
 
         if not os.path.exists(self.cloneDestination):
             os.makedirs(self.cloneDestination)
